@@ -70,12 +70,14 @@ window.addEventListener('load', () => {
 window.addEventListener('online', () => {
     updateConnectionStatus();
     console.log('이벤트: 온라인 상태로 변경됨');
+    document.body.style.backgroundColor = "white";
 });
 
 // 오프라인 상태로 변경될 때
 window.addEventListener('offline', () => {
     updateConnectionStatus();
     console.log('이벤트: 오프라인 상태로 변경됨');
+    document.body.style.backgroundColor = "black";
 });
 
 // 디버깅용
