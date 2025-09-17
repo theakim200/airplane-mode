@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+#status-text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+/* 온라인 상태 */
+body.online {
+    background-color: #e8f5e8;
+    color: #2d5a2d;
+}
+
+body.online .indicator {
+    background-color: #4CAF50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+}
+
+/* 오프라인 상태 */
+body.offline {
+    background-color: #f5e8e8;
+    color: #5a2d2d;
+}
+
+body.offline .indicator {
+    background-color: #f44336;
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
+}
