@@ -25,13 +25,13 @@ body {
     transition: all 0.5s ease;
 }
 
-.indicator {
+/* .indicator {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     margin: 0 auto;
     transition: all 0.5s ease;
-}
+} */
 
 /* 온라인 상태 */
 body.online {
@@ -39,10 +39,10 @@ body.online {
     color: #2d5a2d;
 }
 
-body.online .indicator {
+/* body.online .indicator {
     background-color: #4CAF50;
     box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
-}
+} */
 
 /* 오프라인 상태 */
 body.offline {
@@ -50,7 +50,7 @@ body.offline {
     color: #5a2d2d;
 }
 
-body.offline .indicator {
+/* body.offline .indicator {
     background-color: #f44336;
     box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
-}
+} */
