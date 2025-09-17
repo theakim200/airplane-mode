@@ -7,34 +7,34 @@ const indicator = document.getElementById('indicator');
 function updateConnectionStatus() {
     if (navigator.onLine) {
         // 온라인 상태
-        statusText.textContent = 'CONTROL';
+        statusText.textContent = 'ONLINE';
         body.className = 'online';
-        console.log('online');
+        console.log('연결됨: 온라인 상태');
     } else {
         // 오프라인 상태
-        statusText.textContent = 'FREEDOM';
+        statusText.textContent = 'OFFLINE';
         body.className = 'offline';
-        console.log('offline');
+        console.log('연결 끊김: 오프라인 상태');
     }
 }
 
 // 페이지 로드 시 초기 상태 설정
 window.addEventListener('load', () => {
     updateConnectionStatus();
-    console.log('page loaded, connected');
+    console.log('페이지 로드 완료, 연결 상태 확인됨');
 });
 
 // 온라인 상태로 변경될 때
 window.addEventListener('online', () => {
     updateConnectionStatus();
-    console.log('event: online');
+    console.log('이벤트: 온라인 상태로 변경됨');
 });
 
 // 오프라인 상태로 변경될 때
 window.addEventListener('offline', () => {
     updateConnectionStatus();
-    console.log('event: offline');
+    console.log('이벤트: 오프라인 상태로 변경됨');
 });
 
 // 디버깅용: 현재 상태를 콘솔에 출력
-console.log('connection:', navigator.onLine ? 'online' : 'offline');
+console.log('초기 연결 상태:', navigator.onLine ? '온라인' : '오프라인');
